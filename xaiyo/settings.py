@@ -153,3 +153,9 @@ EMAIL_HOST_PASSWORD='P@33c0de'
 EMAIL_USE_TLS=True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+
+try: 
+    from .local_settings import *
+except ImportError:
+    pass
